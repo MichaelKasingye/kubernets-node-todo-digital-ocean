@@ -24,6 +24,10 @@ app.get('/', (req, res) => {
   res.json('pong!');
 });
 
+app.get('/health', (req, res) => {
+  res.json('This server is healthy');
+});
+
 app.get('/todos', (req, res) => {
   knex('todos')
   .then((data) => { res.json(data); })
