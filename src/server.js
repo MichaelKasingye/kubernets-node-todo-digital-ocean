@@ -6,7 +6,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+// 3000 - staging, 2000 - production
+const PORT = process.env.PORT || 4000;
 const knex = require('./db/knex');
 
 /*
@@ -25,7 +26,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/health', (req, res) => {
-  res.json('This server is healthy');
+  res.json('This server is healthy - digital ocean');
 });
 
 app.get('/todos', (req, res) => {
