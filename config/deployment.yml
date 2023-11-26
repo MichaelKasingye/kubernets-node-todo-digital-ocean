@@ -1,14 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: node-example
+  name: node-git-kube-example
   labels:
-    app: node-example
+    app: node-git-kube-example
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: node-example
+      app: node-git-kube-example
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -17,10 +17,10 @@ spec:
   template:
     metadata:
       labels:
-        app: node-example
+        app: node-git-kube-example
     spec:
       containers:
-      - name: node-example
+      - name: node-git-kube-example
         # image: emmamichael/todos-test:v0.1.0.6
         image: <IMAGE>
         ports:
@@ -34,7 +34,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: node-example-service
+  name: node-git-kube-example-service
 spec:
   type: LoadBalancer
   ports:
@@ -43,4 +43,4 @@ spec:
       port: 4000
       targetPort: 4000
   selector:
-    app: node-example
+    app: node-git-kube-example
