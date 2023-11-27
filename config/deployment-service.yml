@@ -1,0 +1,26 @@
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: node
+#   labels:
+#     service: node
+# spec:
+#   selector:
+#     app: node
+#   type: LoadBalancer
+#   ports:
+#     - port: 3000
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-git-kube-example-service
+spec:
+  type: LoadBalancer
+  ports:
+    - name: http
+      protocol: TCP
+      port: 4000
+      targetPort: 4000
+  selector:
+    app: node-git-kube-example
