@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/health', (req, res) => {
-  res.json('This server is healthy - digital ocean');
+  res.json('This server is healthy - digital ocean - volumes');
 });
 
 app.get('/todos', (req, res) => {
