@@ -26,6 +26,24 @@ spec:
         # just added this
         # imagePullSecrets:
         # - name: my-apps
+
+        env:
+        - name: NODE_ENV
+          value: "development"
+        - name: PORT
+          value: "4000"
+        - name: POSTGRES_USER
+          valueFrom:
+            secretKeyRef:
+              name: postgres-credentials
+              key: user
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: postgres-credentials
+              key: password
+      restartPolicy: Always
+
         ports:
         - containerPort: 4000
         resources:
