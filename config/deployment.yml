@@ -24,8 +24,8 @@ spec:
         # image: emmamichael/todos-test:v0.1.0.6
         image: <IMAGE>
         # just added this
-        imagePullSecrets:
-        - name: my-apps
+        # imagePullSecrets:
+        # - name: my-apps
         ports:
         - containerPort: 4000
         resources:
