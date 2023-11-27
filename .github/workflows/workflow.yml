@@ -40,6 +40,9 @@ jobs:
    - name: Deploy-service to DigitalOcean Kubernetes
      run: kubectl apply -f $GITHUB_WORKSPACE/config/deployment-service.yml
 
+   - name: Deploy-pvc to DigitalOcean Kubernetes
+     run: kubectl apply -f $GITHUB_WORKSPACE/config/persistent-volume-claim.yml 
+
    - name: Verify deployment
      run: kubectl rollout status deployment/node-git-kube-example
 
