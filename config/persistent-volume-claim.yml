@@ -9,6 +9,7 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 2Gi
+      storage: 1Gi
   volumeName: postgres-pv-test
-  storageClassName: standard
+  # storageClassName: standard
+  storageClassName: do-block-storage

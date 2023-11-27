@@ -33,21 +33,4 @@ spec:
             cpu: 100m
           limits:
             cpu: 100m
-# Volumes
-        volumeMounts:
-        - mountPath: "/data"
-          name: node-app-pvc
-
-    volumeClaimTemplates:
-    - metadata:
-        name: node-app-pvc
-      spec:
-        accessModes:
-        - ReadWriteOnce
-        resources:
-          requests:
-            storage: 1Gi
-        storageClassName: do-block-storage
-
-# loadBalancer
 

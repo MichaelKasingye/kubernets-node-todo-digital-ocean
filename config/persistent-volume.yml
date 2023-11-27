@@ -6,11 +6,14 @@ metadata:
     type: local
 spec:
   capacity:
-    storage: 2Gi
+    storage: 1Gi
   storageClassName: standard
   accessModes:
     - ReadWriteOnce
-  hostPath:
-    # path: "/Users/nelsonm/Desktop/my-pv-data"
-    path: "/home/michael/volumes"
+  # hostPath:
+  #   path: "/home/michael/volumes"
+
+
+
+
     
