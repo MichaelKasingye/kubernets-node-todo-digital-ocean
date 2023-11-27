@@ -10,8 +10,9 @@ spec:
   storageClassName: standard
   accessModes:
     - ReadWriteOnce
-  # hostPath:
-  #   path: "/home/michael/volumes"
+  hostPath:
+    # path: "/home/michael/volumes"
+    path: "/root/volumes"
 
 
 

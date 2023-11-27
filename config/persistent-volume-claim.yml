@@ -11,5 +11,5 @@ spec:
     requests:
       storage: 1Gi
   volumeName: postgres-pv-test
-  # storageClassName: standard
-  storageClassName: do-block-storage
+  storageClassName: standard
+  # storageClassName: do-block-storage
