@@ -45,6 +45,15 @@ jobs:
 
    - name: Deploy-pv to DigitalOcean Kubernetes
      run: kubectl apply -f $GITHUB_WORKSPACE/config/persistent-volume.yml 
+    
+    - name: Deploy-postgres to DigitalOcean Kubernetes
+     run: kubectl apply -f $GITHUB_WORKSPACE/config/postgres-deployment.yml 
+
+   - name: Deploy-postgres-service to DigitalOcean Kubernetes
+     run: kubectl apply -f $GITHUB_WORKSPACE/config/postgres-service.yml 
+  
+   - name: Deploy-postgres-secrets to DigitalOcean Kubernetes
+     run: kubectl apply -f $GITHUB_WORKSPACE/config/secret.yml 
 
    - name: Verify deployment
      run: kubectl rollout status deployment/node-git-kube-example
